@@ -1,34 +1,31 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
-const Tag = ({lists}) => {
+const tagLabels = ['공부', '일', '코딩', '계획', '여행'];
 
-    const [isClickedTag, setIsClickedTag] = useState(false);
+const Tag = ({ listId, tags, onSelect }) => {
+    const [isOpen, setIsOpen] = useState(false);
 
-
-    const onTag = () => {
-        lists.map( list => list.isFinish ? setIsClickedTag(false) : setIsClickedTag(!isClickedTag))
-        // if(lists.isFinish){
-        //     setIsClickedTag(!isClickedTag);
-        // }else{
-        //     setIsClickedTag(false);
-        // }
-    }
     return (
-        <div className='Tag'>
-            <button
-                onClick={onTag}
-            >TAG</button>
-            <div
-                className='tagBox'
-                style={{ display: isClickedTag ? 'block' : 'none' }}
-            >   <p>태그목록</p>
-                <button>공부</button>
-                <button>일</button>
-                <button>코딩</button>
-                <button>계획</button>
-                <button>여행</button>
-            </div>
+        <div className="Tag">
+            <button onClick={() => setIsOpen(!isOpen)}>TAG</button>
+
+            {/* 조건부 랜더링을 사용해서 출력문 제어 */}
+            {/* true 일 경우 랜더링 false 일 경우 랜더링 X */}
+            {isOpen && (
+                <div className="tagBox bottom">
+                    {tags.map(tag => (
+                        <button
+                            key={tag.id}
+                            // 태그당 id 별도 지정
+                            className={`tag tag${tag.id}`}
+                            onClick={() => onSelect(listId, tag.id)}
+                        >
+                            {/* 해당 id 의 태그 명 */}
+                            {tagLabels[tag.id - 1]}
+                        </button>
+                    ))}
+                </div>
+            )}
         </div>
     );
 };

@@ -1,4 +1,4 @@
-.Main{
+.Main {
     margin: 100px auto;
     width: 360px;
     height: 600px;
@@ -7,11 +7,13 @@
     overflow-y: hidden;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.Main>.inner{
+
+.Main>.inner {
     width: 90%;
     margin: 0 auto;
 }
-.Main>.inner>.left-tit{
+
+.Main>.inner>.left-tit {
     border-top: 3px solid rgba(244, 255, 89, 0.582);
     border-bottom: 3px solid rgba(244, 255, 89, 0.582);
     font-size: 24px;
@@ -20,16 +22,19 @@
     font-weight: 600;
     text-align: center;
 }
-.Main>.inner>.left-tit>span{
+
+.Main>.inner>.left-tit>span {
     padding-left: 10px;
 }
-.InputList{
+
+.InputList {
     margin: 10px;
     display: flex;
     justify-content: space-between;
     padding: 0 5px 0 0;
 }
-.InputList>input{
+
+.InputList>input {
     width: 83%;
     height: 30px;
     border-radius: 10px;
@@ -40,7 +45,7 @@
     background-color: rgba(128, 128, 128, 0.308);
 }
 
-.todoBox{
+.todoBox {
     overflow: hidden;
     overflow-y: scroll;
     scrollbar-width: none;
@@ -51,7 +56,8 @@
     border-radius: 10px;
     margin: 10px;
 }
-.tit{
+
+.tit {
     font-size: 16px;
     font-weight: 600;
 }
@@ -60,16 +66,87 @@
     display: flex;
     justify-content: space-between;
 }
-.finished>p:nth-child(2){
+
+.finished>p:nth-child(2) {
     margin-left: 150px;
     color: rgb(248, 161, 0);
 }
-.finished>p:nth-child(3){
+
+.finished>p:nth-child(3) {
     margin-right: 10px;
     color: rgb(99, 165, 0);
 }
-.isFinished{
+
+.isFinished {
     font-size: 10px;
     line-height: 20px;
     font-weight: 600;
+}
+
+.Tag>.tagBox {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 49px;
+    right: 0px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    z-index: 20;
+    border: 2px solid gray;
+    border-radius: 0 0 10px 10px;
+}
+
+.tagBox {
+    display: flex;
+}
+
+.tagBox>.tag {
+    background-color: white;
+    text-align: center;
+    box-sizing: border-box;
+    width: 25px;
+    height: 16px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+.top {
+    font-size: 8px;
+    align-items: center;
+    line-height: 16px;
+}
+
+.bottom {
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+}
+
+.bottom>.tag {
+    margin: 0 5px;
+}
+
+.tag1 {
+    border: 1px solid red;
+    color: red;
+}
+
+.tag2 {
+    border: 1px solid rgb(0, 55, 255);
+    color: rgb(0, 55, 255);
+}
+
+.tag3 {
+    border: 1px solid rgb(83, 254, 52);
+    color: rgb(83, 254, 52);
+}
+
+.tag4 {
+    border: 1px solid rgb(255, 25, 232);
+    color: rgb(255, 25, 232);
+}
+
+.tag5 {
+    border: 1px solid rgb(140, 0, 255);
+    color: rgb(140, 0, 255);
 }
