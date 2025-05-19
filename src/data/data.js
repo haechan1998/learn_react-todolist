@@ -6,6 +6,7 @@ export const todoList = [
         contents: '할 일1',
         isFinish: false,
         isDel: false,
+        isOpen : false,
         tags: [
             { id: 1, selected: false },
             { id: 2, selected: false },
@@ -19,6 +20,7 @@ export const todoList = [
         contents: '할 일2',
         isFinish: false,
         isDel: false,
+        isOpen : false,
         tags: [
             { id: 1, selected: false },
             { id: 2, selected: false },
@@ -32,6 +34,7 @@ export const todoList = [
         contents: '할 일3',
         isFinish: false,
         isDel: false,
+        isOpen : false,
         tags: [
             { id: 1, selected: false },
             { id: 2, selected: false },
@@ -45,6 +48,7 @@ export const todoList = [
         contents: '할 일4',
         isFinish: true,
         isDel: false,
+        isOpen : false,
         tags: [
             { id: 1, selected: false },
             { id: 2, selected: false },

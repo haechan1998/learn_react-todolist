@@ -44,6 +44,8 @@ const List = ({ lists, onToggle, onRemove, onSelect }) => {
                     {/* 여기에 태그를 달아보자... */}
                     {/* 태그가 달리는 곳은 todo 아래 */}
                     <Tag
+                        lists={lists}
+                        listIsFinished={list.isFinish}
                         listId={list.id}
                         tags={list.tags}
                         onSelect={onSelect} />

@@ -20,7 +20,6 @@ const Main = () => {
 
     // lists 를 다른 객체로 저장해보자.
     const filterLists = lists.filter(n => !n.isDel);
-    console.log(lists);
 
 
     const addTodo = (todo) => {
@@ -39,6 +38,7 @@ const Main = () => {
                         contents: todo,
                         isFinish: false,
                         isDel: false,
+                        isOpen : false,
                         tags: [
                             { id: 1, selected: false },
                             { id: 2, selected: false },
